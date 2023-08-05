@@ -35,4 +35,26 @@ transactionsEl.addEventListener('click', function(event) {
     /* Update income or expenses */
     const amountEl = clickedEl.querySelector('.transaction__amount');
     const amount = +amountEl.textContent; /* Símbolo + converte string em number */
+
+    if (amount > 0) {
+      const currentIncome = numberIncomeEl.textContent;
+      const updatedIncome = currentIncome - amount;
+      numberIncomeEl.textContent = updatedIncome;
+    } else {
+        const currentExpenses = numberExpensesEl.textContent;
+        const updatedExpenses = currentExpenses - amount * -1;
+        numberExpensesEl.textContent = updatedExpenses;
+    }
+
+    const income = +numberIncomeEl.textContent;
+    const expenses = +numberExpensesEl.textContent;
+    balanceNumberEl.textContent = income - expenses;
+
+    if (balanceNumberEl.textContent < 0) {
+      balanceNumberEl.style.color = "red";
+    }
+    
+    /* Ternary method
+
+    balanceNumberEl.textContent < 0 ? balanceNumberEl.style.color = "red" : ''; */
 })
