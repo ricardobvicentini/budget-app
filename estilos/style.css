@@ -61,6 +61,7 @@ body {
     font-family: 'Inter', sans-serif;
     background-color: rgb(225,227,230);
     height: 100vh;
+    height: 100dvh;
     display: flex;
     justify-content: center;
     min-height: 64rem;
@@ -125,7 +126,7 @@ body {
     font-size: 1rem;
     font-weight: 500;
     text-transform: uppercase;
-    margin-bottom: 3px;
+    margin-block: .5rem;
 }
 
 .balance-number {
@@ -191,6 +192,7 @@ body {
     border-radius: 400rem;
     text-transform: uppercase;
     width: 100%;
+    padding: 1rem;
     color: #fff;
     background-color: #0072e4;
     margin-top: 5px;

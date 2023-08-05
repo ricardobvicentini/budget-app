@@ -20,8 +20,19 @@ balanceEl.addEventListener('click', () => {
 }) */
 
 const transactionsEl = document.querySelector('.transactions');
+const balanceNumberEl = document.querySelector('.balance-number');
+const numberIncomeEl = document.querySelector('.number--income');
+const numberExpensesEl = document.querySelector('.number--expenses')
+const formEl = document.querySelector('.form');
+const inputDescriptionEL = document.querySelector('.input--description');
+const inputAmountEl = document.querySelector('.input--amount');
 
 transactionsEl.addEventListener('click', function(event) {
+    /* Remove transaction */
     const clickedEl = event.target.parentNode;
     clickedEl.remove();
+
+    /* Update income or expenses */
+    const amountEl = clickedEl.querySelector('.transaction__amount');
+    const amount = +amountEl.textContent; /* Símbolo + converte string em number */
 })
